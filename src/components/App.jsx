@@ -23,6 +23,7 @@ export function App() {
   const onLeaveFeedback = e => {
     setFeedback(prevState => {
       return {
+        ...feedback,
         [e.target.name]: prevState[e.target.name] + 1,
       };
     });
